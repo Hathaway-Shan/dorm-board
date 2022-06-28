@@ -18,19 +18,30 @@
 </head>
 
 <body>
-    <header>
-        <img src="/assets/html_css_js.png">
-        <h1>Spread the Word!</h1>
-        <!-- login and create post buttons -->
-        <div id="nav" class="upper-right">
-            <button id="auth-button">Logout</button>
-            <button id="create">Home</button>
+    <main class="auth-main">
+        <div class="left">
+            <div class="auth-container">
+                <form id="sign-in">
+                    <h3>Sign In</h3>
+                    <label>Email</label>
+                    <input type="email" id="sign-in-email" />
+                    <label>Password</label>
+                    <input type="password" id="sign-in-password" />
+                </form>
+            </div>
         </div>
-    </header>
-    <!-- corkboard display -->
-    <main>
-        <div id="cork-board"></div>
     </main>
+    <div class="right">
+        <div class="auth-container">
+            <form id="sign-up">
+                <h3>Sign Up</h3>
+                <label>Email</label>
+                <input type="email" id="sign-up-email" />
+                <label>Password</label>
+                <input type="password" id="sign-up-password" />
+            </form>
+        </div>
+    </div>
 
     <script type="module" src="app.js"></script>
 </body>

@@ -21,16 +21,35 @@
     <header>
         <img src="/assets/html_css_js.png">
         <h1>Spread the Word!</h1>
-        <!-- login and create post buttons -->
+        <!-- home and logout buttons -->
         <div id="nav" class="upper-right">
-            <button id="auth-button">Logout</button>
-            <button id="create">Home</button>
+            <button id="logout">Logout</button>
+            <button id="home">Home</button>
         </div>
     </header>
-    <!-- corkboard display -->
+    <!-- post it form -->
     <main>
-        <div id="cork-board"></div>
+        <form id="post-it-form">
+            <label for="title">
+                <div>Title</div>
+                <input type="text" name="title" id="title">
+            </label>
+
+            <label for="description">
+                <div>Title</div>
+                <input type="text" name="description" id="description">
+            </label>
+
+            <label for="contact">
+                <div>Title</div>
+                <input type="text" name="contact" id="contact">
+            </label>
+            <button>Post!</button>
+        </form>
+
     </main>
+
+
 
     <script type="module" src="app.js"></script>
 </body>
