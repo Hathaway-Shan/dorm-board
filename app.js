@@ -1,7 +1,7 @@
 // import services and utilities
 import state from './state.js';
 
-import { getPosts } from './services/GetPost.js';
+import { getPosts } from './services/Services.js';
 import createPostDisplay from './components/PostDisplay.js';
 
 // import component creators
