@@ -1,10 +1,10 @@
 const state = [];
-state.posts = [];
+state.bulletin = [];
 state.errorMessage = '';
 state.user = null;
 
 function initialize() {
-    state.posts = [];
+    state.bulletins = [];
     state.errorMessage = '';
     state.user = null;
 }

@@ -7,7 +7,7 @@ const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 export async function getPosts() {
     const response = await client
         .from('posts')
-        .select(`title, description, contact, create_at`)
+        .select(`title, description, contact, created_at`)
         .order('created_at', { ascending: false });
     return response.data;
 }

@@ -1,8 +1,8 @@
 // import services and utilities
-import state from './state';
+import state from './state.js';
 
 import { getPosts } from './services/GetPost.js';
-import createPostDisplay from './components/PostDisplay';
+import createPostDisplay from './components/PostDisplay.js';
 
 // import component creators
 
@@ -13,6 +13,7 @@ import createPostDisplay from './components/PostDisplay';
 
 async function handlePageLoad() {
     state.bulletin = await getPosts();
+    console.log(state.bulletin);
     display();
 }
 
