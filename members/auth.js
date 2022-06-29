@@ -1,19 +1,32 @@
 import { signIn, signUp } from '../services/Services.js';
 import createAuthForm from '../components/AuthForm.js';
+import state from '../state.js';
+
+async function handlePageLoad() {
+
+    display();
+}
 
 async function handleSignIn(email, password) {
+    console.log(email, password);
     const response = await signIn(email, password);
-    checkAuth(response);
+    console.log(response);
+    return checkAuth(response);
+
 }
 
 async function handleSignUp(email, password) {
+    console.log(email, password);
     const response = await signUp(email, password);
+    console.log(response);
     checkAuth(response);
 }
 
 async function checkAuth(response) {
+
     if (response.error) {
-        return;
+        state.errorMessage = response.error.message;
+        display();
     }
     else {
         location.replace('../CreateBulletin');
@@ -28,4 +41,4 @@ function display() {
     SignUpForm();
 }
 
-display();
+handlePageLoad();

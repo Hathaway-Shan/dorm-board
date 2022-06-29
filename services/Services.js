@@ -15,10 +15,11 @@ export async function getPosts() {
 
 export async function getUser() {
     //return supabase user
-    return client.auth.session() && client.auth.session().user;
+    return await client.auth.session() && client.auth.session().user;
 }
 
 export async function signUp(email, password) {
+    console.log(email, password);
     //implement supabase signup
     return await client.auth.signUp({ email, password });
 }
