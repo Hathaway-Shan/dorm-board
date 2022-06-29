@@ -1,6 +1,5 @@
 // import services and utilities
 import state from './state.js';
-
 import { getPosts } from './services/Services.js';
 import createPostDisplay from './components/PostDisplay.js';
 
@@ -21,6 +20,8 @@ async function handlePageLoad() {
 // Create each component: 
 // - pass in the root element via querySelector
 const PostDisplay = createPostDisplay(document.querySelector('#bulletin-board'));
+
+
 
 // - pass any needed handler functions as properties of an actions object 
 

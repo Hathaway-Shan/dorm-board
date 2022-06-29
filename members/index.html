@@ -13,35 +13,34 @@
         href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
     <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="/styles/home.css" />
+    <link rel="stylesheet" href="/styles/members.css" />
     <title>Web MVC UI</title>
 </head>
 
 <body>
     <main class="auth-main">
-        <div class="left">
-            <div class="auth-container">
-                <form id="sign-in">
-                    <h3>Sign In</h3>
-                    <label>Email</label>
-                    <input type="email" id="sign-in-email" />
-                    <label>Password</label>
-                    <input type="password" id="sign-in-password" />
-                </form>
-            </div>
-        </div>
-    </main>
-    <div class="right">
-        <div class="auth-container">
+        <section>
+            <form id="sign-in">
+                <h3>Sign In</h3>
+                <label>Email</label>
+                <input type="email" id="sign-in-email" />
+                <label>Password</label>
+                <input type="password" id="sign-in-password" />
+                <button name="submit">submit</button>
+            </form>
+
             <form id="sign-up">
                 <h3>Sign Up</h3>
                 <label>Email</label>
                 <input type="email" id="sign-up-email" />
                 <label>Password</label>
                 <input type="password" id="sign-up-password" />
+                <button name="submit">submit</button>
             </form>
-        </div>
-    </div>
+        </section>
+
+    </main>
+
     <!-- set directory to new page src -->
     <script type="module" src="auth.js"></script>
 </body>
