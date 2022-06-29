@@ -23,8 +23,8 @@
         <h1>Spread the Word!</h1>
         <!-- home and logout buttons -->
         <div id="nav" class="upper-right">
-            <button id="logout">Logout</button>
-            <button id="home">Home</button>
+            <!-- href "../" targets the root which here is the app.js HTML  -->
+            <a href="../"><button id="home">Home</button></a>
         </div>
     </header>
     <!-- post it form -->
@@ -36,12 +36,12 @@
             </label>
 
             <label for="description">
-                <div>Title</div>
+                <div>Description</div>
                 <input type="text" name="description" id="description">
             </label>
 
             <label for="contact">
-                <div>Title</div>
+                <div>Contact</div>
                 <input type="text" name="contact" id="contact">
             </label>
             <button>Post!</button>

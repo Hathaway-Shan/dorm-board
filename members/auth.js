@@ -8,17 +8,17 @@ async function handlePageLoad() {
 }
 
 async function handleSignIn(email, password) {
-    console.log(email, password);
+
     const response = await signIn(email, password);
-    console.log(response);
+
     return checkAuth(response);
 
 }
 
 async function handleSignUp(email, password) {
-    console.log(email, password);
+
     const response = await signUp(email, password);
-    console.log(response);
+
     checkAuth(response);
 }
 
