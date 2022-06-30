@@ -19,7 +19,6 @@ export async function getUser() {
 }
 
 export async function signUp(email, password) {
-    console.log(email, password);
     //implement supabase signup
     return await client.auth.signUp({ email, password });
 }
@@ -32,4 +31,18 @@ export async function signIn(email, password) {
 export async function signOut() {
     //implement supabase sign out
     await client.auth.signOut();
+}
+
+export async function addBulletinItem(title, description, contact) {
+    const response = await client
+        .from('bulletins')
+        //syntax for an array of objects
+        .insert([{
+            title: title,
+            description: description,
+            contact: contact,
+        }])
+        //picks out a single item from the array
+        .single();
+    return response;
 }
