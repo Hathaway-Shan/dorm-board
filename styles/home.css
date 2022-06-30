@@ -1,12 +1,1 @@
 /* CSS for home page (index.html) */
-.bulletin {
-    display: flex;
-    flex-direction: column;
-    margin-left: 30px;
-    border: 1px;
-    border-style: solid;
-    border-color: black;
-    text-align: center;
-    background-color: antiquewhite;
-}
-
