@@ -21,18 +21,37 @@
     <header>
         <img src="/assets/html_css_js.png">
         <h1>Spread the Word!</h1>
-        <!-- login and create post buttons -->
+        <!-- home and logout buttons -->
         <div id="nav" class="upper-right">
-            <a href="./members"><button id="auth-button">Sign In</button></a>
-            <a href="./members"><button id="create-button">Sign Up</button></a>
+            <!-- href "../" targets the root which here is the app.js HTML  -->
+            <a href="../"><button id="home">Home</button></a>
         </div>
     </header>
-    <!-- corkboard display -->
+    <!-- post it form -->
     <main>
-        <div id="bulletin-board"></div>
+        <form id="post-it-form">
+            <label for="title">
+                <div>Title</div>
+                <input type="text" name="title" id="title">
+            </label>
+
+            <label for="description">
+                <div>Description</div>
+                <input type="text" name="description" id="description">
+            </label>
+
+            <label for="contact">
+                <div>Contact</div>
+                <input type="text" name="contact" id="contact">
+            </label>
+            <button>Post!</button>
+        </form>
+        <h2 class="error-message"></h2>
     </main>
 
-    <script type="module" src="app.js"></script>
+
+
+    <script type="module" src="create-bulletin.js"></script>
 </body>
 
 </html>
