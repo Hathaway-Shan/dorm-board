@@ -34,15 +34,6 @@ export async function signOut() {
 }
 
 export async function addBulletinItem(title, description, contact) {
-    const response = await client
-        .from('bulletins')
-        //syntax for an array of objects
-        .insert([{
-            title: title,
-            description: description,
-            contact: contact,
-        }])
-        //picks out a single item from the array
-        .single();
+    const response = await client.from('posts').insert({ title: title, description: description, contact: contact }).single();
     return response;
 }
