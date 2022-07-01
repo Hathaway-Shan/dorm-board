@@ -32,7 +32,7 @@ export async function signOut() {
     //implement supabase sign out
     await client.auth.signOut();
 }
-
+//the form data has to be pushed up as an object if we push it up as an array the array is it's own item instead of sending the data to it's spot in the table
 export async function addBulletinItem(title, description, contact) {
     const response = await client.from('posts').insert({ title: title, description: description, contact: contact }).single();
     return response;
